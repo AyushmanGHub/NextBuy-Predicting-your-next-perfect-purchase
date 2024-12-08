@@ -34,7 +34,7 @@ This technique recommends items based on the past interactions of users and the 
 
 ---
 
-## **Project Workflow**
+### **Project Workflow**
 
 1. **Data Preprocessing**:  
    - Cleaning and normalizing product descriptions.  
@@ -59,28 +59,90 @@ This technique recommends items based on the past interactions of users and the 
 
 ---
 
-## **Features and Innovations**
+### **Features and Innovations**
 - **Hybrid Approach**: Combines strengths of both content-based and collaborative filtering to tackle cold-start problems.  
 - **Scalable Training**: Efficient training using sparse matrices for large-scale data.  
 - **Interactive Visualization**: Insights on user behavior, item popularity, and recommendation quality through dynamic dashboards.
 
 ---
-## Exploratory Data Analysis with Visualisation
 
-### Figure 01. Correlation Matrix Heatmap
+## **(a) Content-Based Filtering: Using Product Descriptions**
+
+### Exploratory Data Analysis with Visualisation
+
+#### Figure 01. (a) Most occuring words in Product descriptions, (b) Length of Product Description (c) common Product Description
 <img src="plots/01.png" alt="Alt Text" width="800" height ="450"/>
 
-### Figure 02. Histogram of Categorical Data
+### Result of Prediction 
+
+**Precision for Content-Based Filtering**: 0.61  
+**Recall for Content-Based Filtering**: 0.61
+#### Figure 02. Confusion matrix for Model prediction
 <img src="plots/02.png" alt="Alt Text" width="800" height ="400"/>
 
-### Figure 03. Histogram of Numerical Data
+### Example of Model Output for Description: "angle bracket"
+
+The following products are recommended based on the description **"angle bracket"**:
+
+| Product_ID | Product_Name                                           | Description      |
+|------------|-------------------------------------------------------|------------------|
+| 1212       | Simpson Strong-Tie 12-Gauge Angle                     | angle bracket    |
+| 1229       | Everbilt 1-1/2 in. Zinc-Plated Corner Brace (4-Pack)  | angle bracket    |
+| 1402       | Everbilt 1 in. Zinc-Plated Corner Brace (20-Pack)     | angle bracket    |
+| 1953       | Crown Bolt 1 in. x 72 in. Plain Steel Angle with Holes| angle bracket    |
+| 2624       | Everbilt 3 in. Zinc-Plated Corner Brace (4-Pack)      | angle bracket    |
+
+
+---
+
+## **(b) Collaborative Filtering: Using User-Behavior Data  **
+
+###  Exploratory Data Analysis with Visualisation
+#### Figure 03. Histogram Distribution of Top 50 UserIds
 <img src="plots/03.png" alt="Alt Text" width="800" height ="200"/>
+
+
+#### Figure 04. Histogram Distribution of Top 50 ProductIds
 <img src="plots/04.png" alt="Alt Text" width="800" height ="200"/>
 
-### Figure 04. Scatter matrix of Numerical Data
+### Figure 05. Distribution of Ratings
 <img src="plots/05.png" alt="Alt Text" width="800" height ="450"/>
 
+## 1. Model Evaluation Metrics for SVD Model
+- **Root Mean Squared Error (RMSE):** 1.0551  
+- **Mean Absolute Error (MAE):** 0.8002  
+- **Precision@10:** 0.9693  
+- **Accuracy@10 (Hit Ratio):** 1.0
 
-## Feature selection and training
-### Figure 05. Significance of features for (a) Random Forest Model, (b) XGBoost Model
-<img src="plots/06.png" alt="Alt Text" width="800" height ="250"/>
+### Recommendations for User **A22ZFXQE8AWPEP**
+| **Rank** | **Product ID** | **Score**   |
+|----------|----------------|-------------|
+| 1        | B0023BXQXM     | 4.0525      |
+| 2        | B0027895F4     | 3.9061      |
+| 3        | B0011ULXB8     | 3.8202      |
+| 4        | B002PU7C4K     | 3.8020      |
+| 5        | B005IGXJTA     | 3.7865      |
+
+## 1. Model Evaluation for Alternating Least Squares (ALS)
+### Recommendations for Users
+
+#### **User 354**  
+- **Product ID:** B00IRMZ6S4  
+
+#### **User 173**  
+- **Product ID:** B000AO2NXS  
+
+#### **User 4**  
+- **Product ID:** B00008CMOQ  
+
+#### **User 307**  
+- **Product ID:** B001OMI93S  
+
+--- 
+## Conclusion
+In conclusion, this recommendation system project successfully demonstrated two approaches: Content-Based Filtering and Collaborative Filtering, to suggest relevant products to users on an e-commerce platform. The Content-Based Filtering utilized product descriptions to match user preferences, while the Collaborative Filtering model leveraged user behaviors and ratings for personalized recommendations. Evaluation metrics such as RMSE, Precision@10, and Accuracy@10 showed promising results, with high precision and accuracy, ensuring that the recommendations align closely with user expectations. This project highlights the effectiveness of both methods in enhancing user experience and product discovery on e-commerce platforms.
+
+# ----------------------------------------------------------------
+### * If want to know more about this project there are python Notebook file and all other resources included in same repository.
+### * Feel free to reach out, I'm open to engaging in meaningful conversations and exchanging ideas on these areas. I welcome the chance to explore new insights, collaborate on projects, and contribute to ongoing discussions in these fields.
+
