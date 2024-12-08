@@ -71,14 +71,14 @@ This technique recommends items based on the past interactions of users and the 
 ### Exploratory Data Analysis with Visualisation
 
 #### Figure 01. (a) Most occuring words in Product descriptions, (b) Length of Product Description (c) common Product Description
-<img src="plots/01.png" alt="Alt Text" width="800" height ="450"/>
+<img src="plots/01.png" alt="Alt Text" width="800" height ="350"/>
 
 ### Result of Prediction 
 
 **Precision for Content-Based Filtering**: 0.61  
 **Recall for Content-Based Filtering**: 0.61
 #### Figure 02. Confusion matrix for Model prediction
-<img src="plots/02.png" alt="Alt Text" width="800" height ="400"/>
+<img src="plots/02.png" alt="Alt Text" width="800" height ="350"/>
 
 ### Example of Model Output for Description: "angle bracket"
 
@@ -99,14 +99,14 @@ The following products are recommended based on the description **"angle bracket
 
 ###  Exploratory Data Analysis with Visualisation
 #### Figure 03. Histogram Distribution of Top 50 UserIds
-<img src="plots/03.png" alt="Alt Text" width="800" height ="200"/>
+<img src="plots/03.png" alt="Alt Text" width="800" height ="350"/>
 
 
 #### Figure 04. Histogram Distribution of Top 50 ProductIds
-<img src="plots/04.png" alt="Alt Text" width="800" height ="200"/>
+<img src="plots/04.png" alt="Alt Text" width="800" height ="350"/>
 
 ### Figure 05. Distribution of Ratings
-<img src="plots/05.png" alt="Alt Text" width="800" height ="450"/>
+<img src="plots/05.png" alt="Alt Text" width="800" height ="350"/>
 
 ## 1. Model Evaluation Metrics for SVD Model
 - **Root Mean Squared Error (RMSE):** 1.0551  
@@ -123,7 +123,7 @@ The following products are recommended based on the description **"angle bracket
 | 4        | B002PU7C4K     | 3.8020      |
 | 5        | B005IGXJTA     | 3.7865      |
 
-## 1. Model Evaluation for Alternating Least Squares (ALS)
+## 2. Model Evaluation for Alternating Least Squares (ALS)
 ### Recommendations for Users
 
 #### **User 354**  
