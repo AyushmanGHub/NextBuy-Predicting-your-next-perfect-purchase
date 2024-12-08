@@ -1,3 +1,7 @@
+## Recommendation System for E-commerce Platform
+
+---
+
 # **Next Buy : Predicting Your Next Perfect Product**
 
 This project focuses on building a **Recommendation System for an E-commerce Platform** to enhance user experience by suggesting products. It integrates two major approaches to recommendation:  
